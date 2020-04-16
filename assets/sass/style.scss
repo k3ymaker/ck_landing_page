@@ -8,9 +8,11 @@ body {
     color: #000;
     overflow-x: hidden;
     position: relative;
+	background: #383838;
 
     @include tablet {
     	font-size: 14px;
+		background: #383838;
     }
 }
 

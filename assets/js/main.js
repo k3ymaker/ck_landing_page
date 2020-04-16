@@ -28,6 +28,15 @@ $(document).ready(function() {
 			            scrollTop: ($(target).offset().top)
 			        }, 1250);
 				});
+
+				// Clickout
+				$(document).click(e => {
+					var menu = $('nav');
+
+					if (!menu.is(e.target) && menu.has(e.target).length === 0) {
+						menu.removeClass('active');
+					}
+				});
 				
 			},
 			initServices: function() {
@@ -83,7 +92,7 @@ $(document).ready(function() {
 				// Init the carousel
 				$('.service-item.active .service-carrousel').slick({
 					dots: true,
-					infinite: false,
+					infinite: true,
 					speed: 300,
 					slidesToShow: 1,
 					//centerMode: true,
