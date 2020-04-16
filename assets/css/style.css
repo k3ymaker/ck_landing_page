@@ -1,0 +1,1360 @@
+/* DARK GRAY*/
+/* DARK GRAY*/
+/* GREEN */
+/* GREEN */
+@font-face {
+  font-family: 'News Gothic MT Bold';
+  src: url("../webfonts/NewsGothicMT-Bold.woff2") format("woff2"), url("../webfonts/NewsGothicMT-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+@font-face {
+  font-family: 'News Gothic MT';
+  src: url("../webfonts/NewsGothicMT.woff2") format("woff2"), url("../webfonts/NewsGothicMT.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'News Gothic MT Italic';
+  src: url("../webfonts/NewsGothicMT-Italic.woff2") format("woff2"), url("../webfonts/NewsGothicMT-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic; }
+@font-face {
+  font-family: 'chau_philomene_oneitalic';
+  src: url("../webfonts/chauphilomeneone-italic-webfont.eot");
+  src: url("../webfonts/chauphilomeneone-italic-webfont.eot?#iefix") format("embedded-opentype"), url("../webfonts/chauphilomeneone-italic-webfont.woff2") format("woff2"), url("../webfonts/chauphilomeneone-italic-webfont.woff") format("woff"), url("../webfonts/chauphilomeneone-italic-webfont.ttf") format("truetype"), url("../webfonts/chauphilomeneone-italic-webfont.svg#chau_philomene_oneitalic") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+body {
+  font-family: "News Gothic MT";
+  font-size: 12px;
+  color: #000;
+  overflow-x: hidden;
+  position: relative; }
+  @media (min-width: 768px) {
+    body {
+      font-size: 14px; } }
+
+a {
+  transition: all 0.2s ease-out; }
+
+img {
+  max-width: 100%; }
+
+p {
+  text-indent: 2%; }
+
+.xs-hide {
+  display: none; }
+  @media (min-width: 992px) {
+    .xs-hide {
+      display: block; } }
+
+.md-hide {
+  display: block; }
+  @media (min-width: 992px) {
+    .md-hide {
+      display: none; } }
+
+/* This parent can be any width and height */
+.block {
+  text-align: center;
+  /* May want to do this if there is risk the container may be narrower than the element inside */
+  white-space: nowrap; }
+
+/* The ghost, nudged to maintain perfect centering */
+.block:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em;
+  /* Adjusts for spacing */ }
+
+/* The element to be centered, can also be of any width and height */
+.centered {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  white-space: normal; }
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table; }
+
+h2, h3, h4, h5 {
+  font-family: "chau_philomene_oneitalic";
+  font-weight: normal;
+  margin-top: 0; }
+
+.loader {
+  display: none; }
+
+/* COLORS */
+.text-color1 {
+  color: #383838; }
+
+.text-color2 {
+  color: #b6b537; }
+
+/* BUTTONS */
+.btn-primary {
+  border-radius: 0;
+  border: none;
+  background: #b6b537;
+  padding: 10px 20px;
+  transition: all 0.2s ease-out; }
+  .btn-primary:hover {
+    background: #fff;
+    color: #b6b537; }
+  .btn-primary.btn-outline {
+    border: 2px solid #b6b537;
+    background: transparent;
+    color: #b6b537; }
+    .btn-primary.btn-outline:hover {
+      color: #fff;
+      background: #b6b537; }
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%; }
+  nav.active .navbar-toggle .icon-bar:nth-child(2) {
+    background: rgba(255, 255, 255, 0.5); }
+  nav.active #navbar {
+    right: 0; }
+    nav.active #navbar ul li.active a:before, nav.active #navbar ul li:hover a:before {
+      display: inline-block; }
+  nav .navbar-toggle {
+    z-index: 110;
+    margin: 15px 51px 15px; }
+    @media (min-width: 768px) {
+      nav .navbar-toggle {
+        display: block; } }
+    nav .navbar-toggle .icon-bar {
+      background: rgba(255, 255, 255, 0.25);
+      -webkit-border-radius: 1px;
+      -moz-border-radius: 1px;
+      border-radius: 2px;
+      height: 6px;
+      width: 56px;
+      transition: all 0.2s ease-out;
+      -moz-transform: rotate(-5deg);
+      -webkit-transform: rotate(-5deg);
+      -o-transform: rotate(-5deg);
+      -ms-transform: rotate(-5deg);
+      transform: rotate(-5deg);
+      margin: 8px auto 0px auto; }
+  nav #navbar {
+    position: absolute;
+    right: -180px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    padding-top: 100px;
+    width: 180px;
+    transition: all 0.2s ease-out; }
+    nav #navbar ul li {
+      margin-bottom: 30px; }
+      nav #navbar ul li:hover a {
+        color: #b6b537;
+        background: transparent; }
+      nav #navbar ul li.active a {
+        color: #b6b537; }
+      nav #navbar ul li a {
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 12px;
+        padding: 10px 25px;
+        position: relative;
+        background: transparent;
+        letter-spacing: 0.25rem; }
+        nav #navbar ul li a:before {
+          content: '';
+          -webkit-border-radius: 30px;
+          -moz-border-radius: 30px;
+          border-radius: 30px;
+          background: #b6b537;
+          width: 8px;
+          height: 8px;
+          position: absolute;
+          left: -4px;
+          top: 14px;
+          display: none; }
+
+#home {
+  min-height: 100vh;
+  background: #383838;
+  position: relative;
+  overflow: hidden; }
+  #home .block {
+    height: calc(100vh - 155px);
+    position: relative; }
+    @media (min-width: 992px) {
+      #home .block {
+        height: calc(100vh - 242px); } }
+    #home .block .centered {
+      position: relative; }
+  #home .gradient-background {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b6b537+0,383838+65 */
+    background: #b6b537;
+    /* Old browsers */
+    background: -moz-radial-gradient(center, circle cover, #b6b537 0%, #383838 65%);
+    /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, circle cover, #b6b537 0%, #383838 65%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(circle at center, #b6b537 0%, #383838 65%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b6b537', endColorstr='#383838',GradientType=1 );
+    /* IE6-9 fallback on horizontal gradient */
+    position: absolute;
+    top: calc( ((100vh - 155px)/2) - (70vh/2) );
+    left: calc( 50vw - (70vh/2) );
+    width: 70vh;
+    height: 70vh;
+    z-index: 2;
+    animation-name: header-background-animation;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite; }
+    @media (min-width: 992px) {
+      #home .gradient-background {
+        top: calc( ((100vh - 241px)/2) - (90vh/2) );
+        left: calc( 50vw - (90vh/2) );
+        width: 90vh;
+        height: 90vh; } }
+@keyframes header-background-animation {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(0.75); }
+  100% {
+    transform: scale(1); } }
+  #home .image {
+    width: 235px;
+    height: 283px;
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-image: url("../images/layout/header-image.png");
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+    animation-name: header-image-animation;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(1);
+    transform: scale(0.6);
+    opacity: 0.5; }
+    @media (min-width: 992px) {
+      #home .image {
+        transform: scale(1); } }
+@keyframes header-image-animation {
+  0% {
+    background-position: 0 0; }
+  20% {
+    background-position: -235px 0; }
+  40% {
+    background-position: -470px 0; }
+  60% {
+    background-position: -705px 0; }
+  80% {
+    background-position: -940px 0; }
+  100% {
+    background-position: -940px 0; } }
+  #home .key svg {
+    width: 54px;
+    position: absolute;
+    top: calc(50% + 20px);
+    left: calc(50% - 27px);
+    z-index: 6; }
+    @media (min-width: 992px) {
+      #home .key svg {
+        width: 94px;
+        top: calc(50% + 14px);
+        left: calc(50% - 37px); } }
+    #home .key svg path {
+      fill: #b6b537; }
+  #home .phrase {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; }
+    #home .phrase h2 {
+      font-family: "chau_philomene_oneitalic";
+      font-size: 80px;
+      text-align: center;
+      color: #fff;
+      width: 100%;
+      z-index: 10;
+      position: absolute;
+      bottom: -80px;
+      left: 0;
+      opacity: 0;
+      animation-iteration-count: infinite; }
+      @media (min-width: 992px) {
+        #home .phrase h2 {
+          bottom: -120px; } }
+      #home .phrase h2.step1 {
+        animation-name: prhase-animation-1;
+        animation-duration: 1.5s; }
+      #home .phrase h2.step2 {
+        animation-name: prhase-animation-2;
+        animation-duration: 1.5s; }
+      #home .phrase h2.step3 {
+        animation-name: prhase-animation-3;
+        animation-duration: 1.5s; }
+@keyframes prhase-animation-1 {
+  0% {
+    transform: scale(1);
+    opacity: 1; }
+  25% {
+    transform: scale(0.7);
+    opacity: 0; }
+  100% {
+    transform: scale(0.7);
+    opacity: 0; } }
+@keyframes prhase-animation-2 {
+  0% {
+    transform: scale(1);
+    opacity: 0; }
+  30% {
+    transform: scale(1);
+    opacity: 0; }
+  31% {
+    transform: scale(1);
+    opacity: 1; }
+  75% {
+    transform: scale(0.7);
+    opacity: 0; }
+  100% {
+    transform: scale(0.7);
+    opacity: 0; } }
+@keyframes prhase-animation-3 {
+  0% {
+    transform: scale(1);
+    opacity: 0; }
+  65% {
+    transform: scale(1);
+    opacity: 0; }
+  66% {
+    transform: scale(1);
+    opacity: 1; }
+  100% {
+    transform: scale(0.7);
+    opacity: 0; } }
+  #home .key-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    width: 100%;
+    height: 100vh;
+    transform-style: preserve-3d;
+    z-index: 4;
+    overflow: hidden; }
+  #home .key-wraper {
+    margin: 0 auto;
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    left: calc(50% - 250px);
+    top: calc(50% - 250px);
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    perspective: 600px; }
+    @media (min-width: 992px) {
+      #home .key-wraper {
+        left: calc( 50% - 250px);
+        top: calc( ((100vh - 242px)/2) - 250px); } }
+  #home .bubble {
+    position: absolute;
+    animation: move 3s infinite;
+    background-image: url("../images/svgs/lock-2.svg");
+    height: 94px;
+    width: 78px;
+    opacity: 0.8; }
+  #home .bubble:nth-child(1) {
+    animation-delay: -0.2s;
+    opacity: 1;
+    transform: translate3d(128px, 966px, 47px); }
+  #home .bubble:nth-child(2) {
+    animation-delay: -0.4s;
+    opacity: 1;
+    transform: translate3d(708px, 708px, 1533px); }
+  #home .bubble:nth-child(3) {
+    animation-delay: -0.6s;
+    opacity: 1;
+    transform: translate3d(227px, 934px, 538px); }
+  #home .bubble:nth-child(4) {
+    animation-delay: -0.8s;
+    opacity: 1;
+    transform: translate3d(525px, 153px, 834px); }
+  #home .bubble:nth-child(5) {
+    animation-delay: -1s;
+    opacity: 1;
+    transform: translate3d(627px, 722px, 225px); }
+  #home .bubble:nth-child(6) {
+    animation-delay: -1.2s;
+    opacity: 1;
+    transform: translate3d(142px, 612px, 973px); }
+  #home .bubble:nth-child(7) {
+    animation-delay: -1.4s;
+    opacity: 1;
+    transform: translate3d(516px, 533px, 164px); }
+  #home .bubble:nth-child(8) {
+    animation-delay: -1.6s;
+    opacity: 1;
+    transform: translate3d(213px, 37px, 1295px); }
+  #home .bubble:nth-child(9) {
+    animation-delay: -1.8s;
+    opacity: 1;
+    transform: translate3d(23px, 956px, 1156px); }
+  #home .bubble:nth-child(10) {
+    animation-delay: -2s;
+    opacity: 1;
+    transform: translate3d(39px, 809px, 958px); }
+  #home .bubble:nth-child(11) {
+    animation-delay: -2.2s;
+    opacity: 1;
+    transform: translate3d(745px, 213px, 1577px); }
+  #home .bubble:nth-child(12) {
+    animation-delay: -2.4s;
+    opacity: 1;
+    transform: translate3d(121px, 486px, 1568px); }
+  #home .bubble:nth-child(13) {
+    animation-delay: -2.6s;
+    opacity: 1;
+    transform: translate3d(843px, 108px, 1693px); }
+  #home .bubble:nth-child(14) {
+    animation-delay: -2.8s;
+    opacity: 1;
+    transform: translate3d(820px, 383px, 1285px); }
+  #home .bubble:nth-child(15) {
+    animation-delay: -3s;
+    opacity: 1;
+    transform: translate3d(206px, 585px, 1537px); }
+  #home .bubble:nth-child(16) {
+    animation-delay: -3.2s;
+    opacity: 1;
+    transform: translate3d(775px, 277px, 1500px); }
+  #home .bubble:nth-child(17) {
+    animation-delay: -3.4s;
+    opacity: 1;
+    transform: translate3d(357px, 99px, 1639px); }
+  #home .bubble:nth-child(18) {
+    animation-delay: -3.6s;
+    opacity: 1;
+    transform: translate3d(715px, 518px, 1923px); }
+  #home .bubble:nth-child(19) {
+    animation-delay: -3.8s;
+    opacity: 1;
+    transform: translate3d(795px, 370px, 284px); }
+  #home .bubble:nth-child(20) {
+    animation-delay: -4s;
+    opacity: 1;
+    transform: translate3d(87px, 76px, 1679px); }
+  #home .bubble:nth-child(21) {
+    animation-delay: -4.2s;
+    opacity: 1;
+    transform: translate3d(431px, 725px, 404px); }
+  #home .bubble:nth-child(22) {
+    animation-delay: -4.4s;
+    opacity: 1;
+    transform: translate3d(914px, 853px, 1780px); }
+  #home .bubble:nth-child(23) {
+    animation-delay: -4.6s;
+    opacity: 1;
+    transform: translate3d(522px, 669px, 1438px); }
+  #home .bubble:nth-child(24) {
+    animation-delay: -4.8s;
+    opacity: 1;
+    transform: translate3d(34px, 454px, 1443px); }
+  #home .bubble:nth-child(25) {
+    animation-delay: -5s;
+    opacity: 1;
+    transform: translate3d(404px, 338px, 1985px); }
+  #home .bubble:nth-child(26) {
+    animation-delay: -5.2s;
+    opacity: 1;
+    transform: translate3d(747px, 492px, 944px); }
+  #home .bubble:nth-child(27) {
+    animation-delay: -5.4s;
+    opacity: 1;
+    transform: translate3d(605px, 973px, 846px); }
+  #home .bubble:nth-child(28) {
+    animation-delay: -5.6s;
+    opacity: 1;
+    transform: translate3d(303px, 826px, 1103px); }
+  #home .bubble:nth-child(29) {
+    animation-delay: -5.8s;
+    opacity: 1;
+    transform: translate3d(474px, 707px, 632px); }
+  #home .bubble:nth-child(30) {
+    animation-delay: -6s;
+    opacity: 1;
+    transform: translate3d(80px, 254px, 1131px); }
+  #home .bubble:nth-child(31) {
+    animation-delay: -6.2s;
+    opacity: 1;
+    transform: translate3d(210px, 722px, 13px); }
+  #home .bubble:nth-child(32) {
+    animation-delay: -6.4s;
+    opacity: 1;
+    transform: translate3d(927px, 668px, 1276px); }
+  #home .bubble:nth-child(33) {
+    animation-delay: -6.6s;
+    opacity: 1;
+    transform: translate3d(148px, 292px, 1742px); }
+  #home .bubble:nth-child(34) {
+    animation-delay: -6.8s;
+    opacity: 1;
+    transform: translate3d(344px, 697px, 390px); }
+  #home .bubble:nth-child(35) {
+    animation-delay: -7s;
+    opacity: 1;
+    transform: translate3d(121px, 274px, 903px); }
+  #home .bubble:nth-child(36) {
+    animation-delay: -7.2s;
+    opacity: 1;
+    transform: translate3d(104px, 340px, 565px); }
+  #home .bubble:nth-child(37) {
+    animation-delay: -7.4s;
+    opacity: 1;
+    transform: translate3d(285px, 955px, 277px); }
+  #home .bubble:nth-child(38) {
+    animation-delay: -7.6s;
+    opacity: 1;
+    transform: translate3d(245px, 297px, 1388px); }
+  #home .bubble:nth-child(39) {
+    animation-delay: -7.8s;
+    opacity: 1;
+    transform: translate3d(936px, 230px, 555px); }
+  #home .bubble:nth-child(40) {
+    animation-delay: -8s;
+    opacity: 1;
+    transform: translate3d(925px, 817px, 1758px); }
+  #home .bubble:nth-child(41) {
+    animation-delay: -8.2s;
+    opacity: 1;
+    transform: translate3d(678px, 23px, 730px); }
+  #home .bubble:nth-child(42) {
+    animation-delay: -8.4s;
+    opacity: 1;
+    transform: translate3d(720px, 361px, 788px); }
+  #home .bubble:nth-child(43) {
+    animation-delay: -8.6s;
+    opacity: 1;
+    transform: translate3d(88px, 301px, 612px); }
+  #home .bubble:nth-child(44) {
+    animation-delay: -8.8s;
+    opacity: 1;
+    transform: translate3d(507px, 849px, 1408px); }
+  #home .bubble:nth-child(45) {
+    animation-delay: -9s;
+    opacity: 1;
+    transform: translate3d(704px, 272px, 642px); }
+  #home .bubble:nth-child(46) {
+    animation-delay: -9.2s;
+    opacity: 1;
+    transform: translate3d(252px, 193px, 522px); }
+  #home .bubble:nth-child(47) {
+    animation-delay: -9.4s;
+    opacity: 1;
+    transform: translate3d(64px, 175px, 1117px); }
+  #home .bubble:nth-child(48) {
+    animation-delay: -9.6s;
+    opacity: 1;
+    transform: translate3d(994px, 12px, 1931px); }
+  #home .bubble:nth-child(49) {
+    animation-delay: -9.8s;
+    opacity: 1;
+    transform: translate3d(208px, 475px, 1556px); }
+  #home .bubble:nth-child(50) {
+    animation-delay: -10s;
+    opacity: 1;
+    transform: translate3d(135px, 456px, 178px); }
+  #home .bubble:nth-child(51) {
+    animation-delay: -10.2s;
+    opacity: 1;
+    transform: translate3d(295px, 339px, 1500px); }
+  #home .bubble:nth-child(52) {
+    animation-delay: -10.4s;
+    opacity: 1;
+    transform: translate3d(955px, 398px, 720px); }
+  #home .bubble:nth-child(53) {
+    animation-delay: -10.6s;
+    opacity: 1;
+    transform: translate3d(517px, 703px, 689px); }
+  #home .bubble:nth-child(54) {
+    animation-delay: -10.8s;
+    opacity: 1;
+    transform: translate3d(950px, 405px, 977px); }
+  #home .bubble:nth-child(55) {
+    animation-delay: -11s;
+    opacity: 1;
+    transform: translate3d(176px, 961px, 11px); }
+  #home .bubble:nth-child(56) {
+    animation-delay: -11.2s;
+    opacity: 1;
+    transform: translate3d(601px, 993px, 695px); }
+  #home .bubble:nth-child(57) {
+    animation-delay: -11.4s;
+    opacity: 1;
+    transform: translate3d(710px, 374px, 1107px); }
+  #home .bubble:nth-child(58) {
+    animation-delay: -11.6s;
+    opacity: 1;
+    transform: translate3d(700px, 8px, 1409px); }
+  #home .bubble:nth-child(59) {
+    animation-delay: -11.8s;
+    opacity: 1;
+    transform: translate3d(148px, 865px, 247px); }
+  #home .bubble:nth-child(60) {
+    animation-delay: -12s;
+    opacity: 1;
+    transform: translate3d(907px, 684px, 984px); }
+  #home .bubble:nth-child(61) {
+    animation-delay: -12.2s;
+    opacity: 1;
+    transform: translate3d(928px, 910px, 99px); }
+  #home .bubble:nth-child(62) {
+    animation-delay: -12.4s;
+    opacity: 1;
+    transform: translate3d(784px, 415px, 650px); }
+  #home .bubble:nth-child(63) {
+    animation-delay: -12.6s;
+    opacity: 1;
+    transform: translate3d(755px, 461px, 1808px); }
+  #home .bubble:nth-child(64) {
+    animation-delay: -12.8s;
+    opacity: 1;
+    transform: translate3d(532px, 796px, 350px); }
+  #home .bubble:nth-child(65) {
+    animation-delay: -13s;
+    opacity: 1;
+    transform: translate3d(580px, 106px, 1921px); }
+  #home .bubble:nth-child(66) {
+    animation-delay: -13.2s;
+    opacity: 1;
+    transform: translate3d(974px, 721px, 1355px); }
+  #home .bubble:nth-child(67) {
+    animation-delay: -13.4s;
+    opacity: 1;
+    transform: translate3d(816px, 493px, 383px); }
+  #home .bubble:nth-child(68) {
+    animation-delay: -13.6s;
+    opacity: 1;
+    transform: translate3d(274px, 431px, 1295px); }
+  #home .bubble:nth-child(69) {
+    animation-delay: -13.8s;
+    opacity: 1;
+    transform: translate3d(399px, 294px, 905px); }
+  #home .bubble:nth-child(70) {
+    animation-delay: -14s;
+    opacity: 1;
+    transform: translate3d(749px, 679px, 1711px); }
+  #home .bubble:nth-child(71) {
+    animation-delay: -14.2s;
+    opacity: 1;
+    transform: translate3d(65px, 602px, 370px); }
+  #home .bubble:nth-child(72) {
+    animation-delay: -14.4s;
+    opacity: 1;
+    transform: translate3d(559px, 57px, 1730px); }
+  #home .bubble:nth-child(73) {
+    animation-delay: -14.6s;
+    opacity: 1;
+    transform: translate3d(389px, 488px, 1261px); }
+  #home .bubble:nth-child(74) {
+    animation-delay: -14.8s;
+    opacity: 1;
+    transform: translate3d(469px, 680px, 1851px); }
+  #home .bubble:nth-child(75) {
+    animation-delay: -15s;
+    opacity: 1;
+    transform: translate3d(39px, 964px, 1232px); }
+  #home .bubble:nth-child(76) {
+    animation-delay: -15.2s;
+    opacity: 1;
+    transform: translate3d(75px, 917px, 470px); }
+  #home .bubble:nth-child(77) {
+    animation-delay: -15.4s;
+    opacity: 1;
+    transform: translate3d(219px, 768px, 971px); }
+  #home .bubble:nth-child(78) {
+    animation-delay: -15.6s;
+    opacity: 1;
+    transform: translate3d(547px, 84px, 678px); }
+  #home .bubble:nth-child(79) {
+    animation-delay: -15.8s;
+    opacity: 1;
+    transform: translate3d(195px, 586px, 367px); }
+  #home .bubble:nth-child(80) {
+    animation-delay: -16s;
+    opacity: 1;
+    transform: translate3d(769px, 759px, 53px); }
+  #home .bubble:nth-child(81) {
+    animation-delay: -16.2s;
+    opacity: 1;
+    transform: translate3d(893px, 271px, 506px); }
+  #home .bubble:nth-child(82) {
+    animation-delay: -16.4s;
+    opacity: 1;
+    transform: translate3d(645px, 569px, 553px); }
+  #home .bubble:nth-child(83) {
+    animation-delay: -16.6s;
+    opacity: 1;
+    transform: translate3d(951px, 967px, 1778px); }
+  #home .bubble:nth-child(84) {
+    animation-delay: -16.8s;
+    opacity: 1;
+    transform: translate3d(18px, 40px, 436px); }
+  #home .bubble:nth-child(85) {
+    animation-delay: -17s;
+    opacity: 1;
+    transform: translate3d(882px, 435px, 1843px); }
+  #home .bubble:nth-child(86) {
+    animation-delay: -17.2s;
+    opacity: 1;
+    transform: translate3d(942px, 825px, 1913px); }
+  #home .bubble:nth-child(87) {
+    animation-delay: -17.4s;
+    opacity: 1;
+    transform: translate3d(458px, 29px, 156px); }
+  #home .bubble:nth-child(88) {
+    animation-delay: -17.6s;
+    opacity: 1;
+    transform: translate3d(249px, 868px, 975px); }
+  #home .bubble:nth-child(89) {
+    animation-delay: -17.8s;
+    opacity: 1;
+    transform: translate3d(822px, 959px, 1897px); }
+  #home .bubble:nth-child(90) {
+    animation-delay: -18s;
+    opacity: 1;
+    transform: translate3d(651px, 125px, 1449px); }
+  #home .bubble:nth-child(91) {
+    animation-delay: -18.2s;
+    opacity: 1;
+    transform: translate3d(980px, 608px, 1807px); }
+  #home .bubble:nth-child(92) {
+    animation-delay: -18.4s;
+    opacity: 1;
+    transform: translate3d(812px, 457px, 965px); }
+  #home .bubble:nth-child(93) {
+    animation-delay: -18.6s;
+    opacity: 1;
+    transform: translate3d(239px, 803px, 293px); }
+  #home .bubble:nth-child(94) {
+    animation-delay: -18.8s;
+    opacity: 1;
+    transform: translate3d(824px, 532px, 1518px); }
+  #home .bubble:nth-child(95) {
+    animation-delay: -19s;
+    opacity: 1;
+    transform: translate3d(322px, 226px, 199px); }
+  #home .bubble:nth-child(96) {
+    animation-delay: -19.2s;
+    opacity: 1;
+    transform: translate3d(877px, 902px, 616px); }
+  #home .bubble:nth-child(97) {
+    animation-delay: -19.4s;
+    opacity: 1;
+    transform: translate3d(899px, 41px, 1689px); }
+  #home .bubble:nth-child(98) {
+    animation-delay: -19.6s;
+    opacity: 1;
+    transform: translate3d(541px, 461px, 130px); }
+  #home .bubble:nth-child(99) {
+    animation-delay: -19.8s;
+    opacity: 1;
+    transform: translate3d(936px, 880px, 529px); }
+  #home .bubble:nth-child(100) {
+    animation-delay: -20s;
+    opacity: 1;
+    transform: translate3d(495px, 566px, 1426px); }
+@keyframes move {
+  100% {
+    transform: translate3d(150px, 150px, -1000px);
+    opacity: 0; } }
+@media (min-width: 992px) {
+  main .container {
+    width: 970px; } }
+
+.content-box {
+  width: 280px;
+  margin: 0 auto;
+  color: #fff;
+  position: relative; }
+  @media (min-width: 768px) {
+    .content-box {
+      width: 434px; } }
+  .content-box .content {
+    padding: 0 25px;
+    position: relative;
+    z-index: 2;
+    width: 100%; }
+  .content-box .heading {
+    position: relative;
+    z-index: 2; }
+    .content-box .heading .icon {
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+      width: 32px;
+      height: 52px;
+      position: absolute;
+      top: 20px;
+      left: -23px; }
+      @media (min-width: 768px) {
+        .content-box .heading .icon {
+          width: 72px;
+          height: 122px;
+          top: 6px;
+          left: -56px; } }
+      .content-box .heading .icon.icon-white {
+        background-image: url("../images/layout/icons/upside-down-key-white.png"); }
+      .content-box .heading .icon.icon-green {
+        background-image: url("../images/layout/icons/upside-down-key-green.png"); }
+  .content-box .gradient-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+#about-wrap {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,b6b537+100 */
+  background: #ffffff;
+  /* Old browsers */
+  background: -moz-radial-gradient(center, circle cover, #fff 0%, #b6b537 50%, #383838 100%);
+  /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, circle cover, #fff 0%, #b6b537 50%, #383838 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(circle at center, #fff 0%, #b6b537 50%, #383838 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  min-height: 100vh; }
+  #about-wrap .content-box {
+    margin-top: -155px; }
+    @media (min-width: 992px) {
+      #about-wrap .content-box {
+        margin-top: -241px; } }
+    #about-wrap .content-box .gradient-background {
+      /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#383838+25,b6b537+100 */
+      background: #383838;
+      /* Old browsers */
+      background: -moz-linear-gradient(top, #383838 25%, #b6b537 100%);
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, #383838 25%, #b6b537 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom, #383838 25%, #b6b537 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#383838', endColorstr='#b6b537',GradientType=0 );
+      /* IE6-9 */ }
+      @media (min-width: 768px) {
+        #about-wrap .content-box .gradient-background {
+          top: 241px;
+          height: calc(100% - 241px); } }
+    #about-wrap .content-box .content {
+      padding: 25px 25px 200px; }
+      @media (min-width: 992px) {
+        #about-wrap .content-box .content {
+          padding-bottom: 350px; } }
+      #about-wrap .content-box .content h2 {
+        font-size: 26px;
+        text-align: center;
+        margin-bottom: 35px; }
+      #about-wrap .content-box .content h3 {
+        color: #b6b537;
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 25px; }
+  #about-wrap .heading {
+    background: url("../images/layout/corners/about.png");
+    background-size: 100% auto;
+    width: 100%;
+    height: 155px;
+    overflow: auto;
+    text-align: center;
+    padding-top: 50px; }
+    @media (min-width: 768px) {
+      #about-wrap .heading {
+        height: 241px;
+        padding-top: 80px;
+        z-index: 9; } }
+    #about-wrap .heading svg {
+      width: 100px; }
+      @media (min-width: 768px) {
+        #about-wrap .heading svg {
+          width: 110px; } }
+      #about-wrap .heading svg path {
+        fill: #b6b537; }
+    #about-wrap .heading p {
+      font-family: "chau_philomene_oneitalic";
+      font-size: 16px; }
+      @media (min-width: 768px) {
+        #about-wrap .heading p {
+          font-size: 18px; } }
+
+#services {
+  min-height: 100vh;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,000000+100 */
+  background: #383838;
+  /* Old browsers */
+  background: -moz-radial-gradient(center, circle cover, #383838 0%, #000 70%);
+  /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, circle cover, #383838 0%, #000 70%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(circle at center, #383838 0%, #000 70%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#383838', endColorstr='#000000',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  /* OUR SERVICES */
+  /* LETTERING */ }
+  #services #our-services {
+    margin-top: -155px; }
+    @media (min-width: 992px) {
+      #services #our-services {
+        float: left;
+        margin-top: -242px; } }
+    #services #our-services.content-box .heading {
+      background: url("../images/layout/corners/services.png");
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      width: 100%;
+      height: 155px; }
+      @media (min-width: 768px) {
+        #services #our-services.content-box .heading {
+          height: 240px; } }
+    #services #our-services.content-box .gradient-background {
+      /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#383838+0,000000+100 */
+      background: #383838;
+      /* Old browsers */
+      background: -moz-linear-gradient(top, #383838 0%, #000000 100%);
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, #383838 0%, #000000 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom, #383838 0%, #000000 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#383838', endColorstr='#000000',GradientType=0 );
+      /* IE6-9 */
+      height: calc(100% - 60px);
+      top: 60px; }
+      @media (min-width: 768px) {
+        #services #our-services.content-box .gradient-background {
+          top: 86px;
+          height: calc(100% - 86px); } }
+    #services #our-services.content-box .content {
+      padding: 25px 25px 145px;
+      margin-top: -105px; }
+      @media (min-width: 768px) {
+        #services #our-services.content-box .content {
+          margin-top: -145px; } }
+      @media (min-width: 992px) {
+        #services #our-services.content-box .content {
+          padding-bottom: 245px; } }
+      #services #our-services.content-box .content h2 {
+        margin-bottom: 25px; }
+      #services #our-services.content-box .content ul li {
+        list-style: none;
+        margin-bottom: 25px;
+        opacity: 0.5;
+        transition: all 0.2s ease-out;
+        display: block; }
+        #services #our-services.content-box .content ul li:hover, #services #our-services.content-box .content ul li.active {
+          opacity: 1;
+          cursor: pointer; }
+        #services #our-services.content-box .content ul li h3 {
+          color: #b6b537;
+          font-size: 20px; }
+          #services #our-services.content-box .content ul li h3::before {
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 104 182" fill="%23b6b537"><path d="M102.573,36.777L80.516,72.408,89,96.84q0.9,2.6.17,3.393t-4.751.792a39.71,39.71,0,0,1-8.427-.961q-4.411-.962-5.2-3.224L63.662,75.914l0.453-3.393L86.059,36.777Q88.32,32.7,95.73,32.7t7.409,2.489A3.112,3.112,0,0,1,102.573,36.777ZM57.7,26.834q-11.207,0-11.207-10.112a26.64,26.64,0,0,1,.178-2.89q1.776-13,14.586-13,11.207,0,11.207,10.113a27.273,27.273,0,0,1-.178,2.889Q70.506,26.835,57.7,26.834Zm-5.8,6.719a9.565,9.565,0,0,1,4.751-.849q8.144,0,7.692,4.3L61.287,70.711,55.621,112.98a56.181,56.181,0,0,1,9.607-.87q13.688,0,17.759,6.561,2.6,4.072,2.6,10.633a106.966,106.966,0,0,1-1.074,14.422,75.3,75.3,0,0,1-2.941,13.46,22.068,22.068,0,0,1-5.26,8.936,17.48,17.48,0,0,1-7.805,4.524,49.457,49.457,0,0,1-12.272,1.188,24.094,24.094,0,0,1-8.322-1.358l-0.879,6.561q-0.453,2.829-1.244,3.563t-3.676.735a45.074,45.074,0,0,1-5.26-.282,11.669,11.669,0,0,1-4.242-1.3q-1.866-1.019-1.64-2.488l0.991-7.237a56.733,56.733,0,0,1-11.038,1.128q-13.687,0-17.758-6.56-2.6-4.073-2.6-10.633A106.973,106.973,0,0,1,1.641,139.54a75.323,75.323,0,0,1,2.941-13.461,22.073,22.073,0,0,1,5.26-8.935,17.473,17.473,0,0,1,7.8-4.524,49.416,49.416,0,0,1,12.273-1.188,22.95,22.95,0,0,1,9.8,1.972L50.2,36.89A4.385,4.385,0,0,1,51.9,33.553ZM34.387,124.327a17.275,17.275,0,0,0-7.692-1.471q-4.751,0-6.561,3.846t-3,12.556a106.074,106.074,0,0,0-1.187,12.159,24.682,24.682,0,0,0,.339,4.921q1.129,3.732,5.769,3.732a54.73,54.73,0,0,0,10.519-.791l0.884-.182,4.552-33.232Zm17.381,34.612a17.275,17.275,0,0,0,7.692,1.471q4.751,0,6.56-3.846t3-12.556A105.993,105.993,0,0,0,70.2,131.849a24.686,24.686,0,0,0-.339-4.921q-1.13-3.734-5.769-3.733a57.768,57.768,0,0,0-9.937.685l-4.575,34.133Z"/></svg>');
+            content: '';
+            display: inline-block;
+            width: 18px;
+            height: 31px;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            vertical-align: top;
+            margin: -6px 5px 0 0; }
+  #services #services-wrap {
+    margin-top: -90px; }
+    @media (min-width: 992px) {
+      #services #services-wrap {
+        float: right;
+        margin-top: -87px;
+        padding-bottom: 55px; } }
+    #services #services-wrap .gradient-background {
+      /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,383838+100 */
+      background: #000000;
+      /* Old browsers */
+      background: -moz-linear-gradient(top, #000000 0%, #383838 100%);
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, #000000 0%, #383838 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom, #000000 0%, #383838 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#383838',GradientType=0 );
+      /* IE6-9 */
+      top: 56px;
+      height: calc(100% - 56px); }
+      @media (min-width: 768px) {
+        #services #services-wrap .gradient-background {
+          top: 87px;
+          height: calc(100% - 87px); } }
+    #services #services-wrap .heading {
+      background: url("../images/layout/corners/black-corner.png");
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      width: 100%;
+      height: 56px; }
+      @media (min-width: 768px) {
+        #services #services-wrap .heading {
+          height: 87px; } }
+    #services #services-wrap .service-item {
+      display: none; }
+      #services #services-wrap .service-item.active {
+        display: block; }
+    #services #services-wrap .border-glow.main-images img {
+      border: 2px solid #fff;
+      -webkit-box-shadow: 0 0 8px 4px #b6b537;
+      box-shadow: 0 0 8px 4px #b6b537; }
+    #services #services-wrap .service-carrousel.drop-shadow-thumb .item img {
+      -webkit-box-shadow: 0 0 4px 2px #000000;
+      box-shadow: 0 0 4px 2px #000000; }
+    #services #services-wrap .content {
+      padding: 25px 0 105px;
+      overflow: hidden; }
+      @media (min-width: 768px) {
+        #services #services-wrap .content {
+          padding-bottom: 145px; } }
+      @media (min-width: 992px) {
+        #services #services-wrap .content {
+          padding-bottom: 242px; } }
+      #services #services-wrap .content h2 {
+        padding: 0 25px; }
+      #services #services-wrap .content .main-images {
+        max-width: 220px;
+        margin: 25px auto;
+        position: relative;
+        text-align: center;
+        height: 336px;
+        line-height: 336px; }
+        @media (min-width: 768px) {
+          #services #services-wrap .content .main-images {
+            max-width: 350px;
+            height: 520px;
+            line-height: 520px; } }
+        #services #services-wrap .content .main-images .image {
+          display: none;
+          text-align: center; }
+          #services #services-wrap .content .main-images .image.active {
+            display: inline-block; }
+          #services #services-wrap .content .main-images .image img {
+            max-height: 100%; }
+        #services #services-wrap .content .main-images .old-image {
+          display: none; }
+        #services #services-wrap .content .main-images:hover .new-image {
+          display: none; }
+        #services #services-wrap .content .main-images:hover .old-image {
+          display: inline-block; }
+      #services #services-wrap .content .service-carrousel {
+        margin-bottom: 0; }
+        #services #services-wrap .content .service-carrousel .item img {
+          max-height: 130px;
+          max-width: 85px; }
+        #services #services-wrap .content .service-carrousel .item .thumb {
+          padding: 10px 7px;
+          opacity: 0.7;
+          transition: all 0.2s ease-out;
+          cursor: pointer; }
+          #services #services-wrap .content .service-carrousel .item .thumb:hover {
+            opacity: 1; }
+        #services #services-wrap .content .service-carrousel .slick-slide.slick-active .thumb, #services #services-wrap .content .service-carrousel .slick-slide.slick-current .thumb {
+          opacity: 1; }
+
+/* INSTITUCIONAL */
+#institutional {
+  min-height: 100vh;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,b6b537+50,383838+100 */
+  background: #ffffff;
+  /* Old browsers */
+  background: -moz-radial-gradient(center, circle cover, #ffffff 0%, #b6b537 15%, #383838 60%);
+  /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, circle cover, #ffffff 0%, #b6b537 15%, #383838 60%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(circle at center, #ffffff 0%, #b6b537 15%, #383838 60%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  /* COMPANY NUMBERS */
+  /* JOBS */ }
+  #institutional #our-numbers {
+    margin-top: -52px; }
+    @media (min-width: 768px) {
+      #institutional #our-numbers {
+        margin-top: -87px; } }
+    @media (min-width: 992px) {
+      #institutional #our-numbers {
+        float: left;
+        margin-left: -20px;
+        margin-top: -175px;
+        padding-bottom: 165px; } }
+    #institutional #our-numbers .gradient-background {
+      /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,383838+100 */
+      background: #000000;
+      /* Old browsers */
+      background: -moz-linear-gradient(top, #000000 0%, #383838 100%);
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, #000000 0%, #383838 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom, #000000 0%, #383838 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#383838',GradientType=0 );
+      /* IE6-9 */
+      top: 56px;
+      height: calc(100% - 56px); }
+      @media (min-width: 768px) {
+        #institutional #our-numbers .gradient-background {
+          top: 87px;
+          height: calc(100% - 87px); } }
+    #institutional #our-numbers .heading {
+      background: url("../images/layout/corners/black-green-corner.png");
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      width: 100%;
+      height: 56px; }
+      @media (min-width: 768px) {
+        #institutional #our-numbers .heading {
+          height: 87px; } }
+    #institutional #our-numbers .content {
+      padding: 25px 25px 125px;
+      overflow: hidden; }
+      @media (min-width: 992px) {
+        #institutional #our-numbers .content {
+          padding-bottom: 245px; } }
+      #institutional #our-numbers .content h2 {
+        color: #b6b537;
+        margin-bottom: 25px; }
+    #institutional #our-numbers ul {
+      margin-bottom: 35px; }
+      #institutional #our-numbers ul:last-child {
+        margin-bottom: 0; }
+      #institutional #our-numbers ul li {
+        list-style: none;
+        float: left;
+        text-align: center;
+        font-family: "chau_philomene_oneitalic";
+        margin-bottom: 30px; }
+        #institutional #our-numbers ul li .number {
+          color: #b6b537;
+          display: block;
+          font-size: 40px;
+          line-height: 40px; }
+        #institutional #our-numbers ul li .text {
+          display: block;
+          font-size: 16px; }
+          @media (min-width: 768px) {
+            #institutional #our-numbers ul li .text {
+              font-size: 20px;
+              line-height: 110%; } }
+      #institutional #our-numbers ul.over-line li .number::before {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 5px;
+        background: #b6b537;
+        margin: 0 auto 10px;
+        -moz-transform: rotate(-10deg);
+        -webkit-transform: rotate(-10deg);
+        -o-transform: rotate(-10deg);
+        -ms-transform: rotate(-10deg);
+        transform: rotate(-10deg); }
+      #institutional #our-numbers ul.two-per-row li {
+        width: 50%; }
+      #institutional #our-numbers ul.three-per-row li {
+        width: calc(100%/3); }
+  #institutional #jobs {
+    margin-top: -105px; }
+    @media (min-width: 992px) {
+      #institutional #jobs {
+        float: right;
+        margin-right: 20px;
+        margin-top: -175px;
+        padding-bottom: 165px; } }
+    #institutional #jobs .gradient-background {
+      /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,383838+100 */
+      background: #000000;
+      /* Old browsers */
+      background: -moz-linear-gradient(top, #000000 0%, #383838 100%);
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, #000000 0%, #383838 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom, #000000 0%, #383838 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#383838',GradientType=0 );
+      /* IE6-9 */
+      top: 56px;
+      height: calc(100% - 56px); }
+      @media (min-width: 768px) {
+        #institutional #jobs .gradient-background {
+          top: 87px;
+          height: calc(100% - 87px); } }
+    #institutional #jobs .heading {
+      background: url("../images/layout/corners/black-green-corner.png");
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      width: 100%;
+      height: 56px; }
+      @media (min-width: 768px) {
+        #institutional #jobs .heading {
+          height: 87px; } }
+    #institutional #jobs .content {
+      padding: 25px 25px 145px;
+      overflow: hidden; }
+      @media (min-width: 992px) {
+        #institutional #jobs .content {
+          padding-bottom: 245px; } }
+      #institutional #jobs .content h2 {
+        color: #b6b537;
+        margin-bottom: 25px; }
+      #institutional #jobs .content ul li {
+        list-style: none;
+        margin-bottom: 35px; }
+        #institutional #jobs .content ul li .btn-outline {
+          display: block;
+          margin: 5px auto 0px auto; }
+        #institutional #jobs .content ul li h3 {
+          color: #b6b537;
+          font-size: 20px; }
+          #institutional #jobs .content ul li h3::before {
+            content: '';
+            display: inline-block;
+            width: 17px;
+            height: 21px;
+            background-image: url("../images/layout/icons/lock.png");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            vertical-align: top;
+            margin: 0 5px 0 0; }
+          #institutional #jobs .content ul li h3 .info {
+            color: #fff;
+            font-size: 11px;
+            font-family: "News Gothic MT Bold"; }
+
+/* CONTACT */
+#contact-wrap {
+  min-height: 100vh;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#383838+0,000000+100 */
+  background: #383838;
+  /* Old browsers */
+  background: -moz-radial-gradient(center, circle cover, #383838 0%, #000000 100%);
+  /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, circle cover, #383838 0%, #000000 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(circle at center, #383838 0%, #000000 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#383838', endColorstr='#000000',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  margin-top: 0; }
+  @media (min-width: 992px) {
+    #contact-wrap {
+      text-align: center; } }
+  #contact-wrap .content-box {
+    margin-top: -52px; }
+    @media (min-width: 768px) {
+      #contact-wrap .content-box {
+        margin-top: -87px; } }
+    @media (min-width: 992px) {
+      #contact-wrap .content-box {
+        margin-top: -175px;
+        display: inline-block;
+        text-align: left; } }
+  #contact-wrap .gradient-background {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,383838+100 */
+    background: #000000;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #000000 0%, #383838 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #000000 0%, #383838 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #000000 0%, #383838 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#383838',GradientType=0 );
+    /* IE6-9 */
+    top: 56px;
+    height: calc(100% - 56px); }
+    @media (min-width: 768px) {
+      #contact-wrap .gradient-background {
+        top: 87px;
+        height: calc(100% - 87px); } }
+  #contact-wrap .heading {
+    background: url("../images/layout/corners/black-green-corner.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    width: 100%;
+    height: 56px; }
+    @media (min-width: 768px) {
+      #contact-wrap .heading {
+        height: 87px; } }
+  #contact-wrap .content {
+    padding: 25px 25px;
+    overflow: hidden; }
+    #contact-wrap .content h2 {
+      color: #b6b537;
+      margin-bottom: 25px; }
+    #contact-wrap .content p {
+      font-size: 18px; }
+    #contact-wrap .content a {
+      color: #fff; }
+    #contact-wrap .content form {
+      margin-top: 35px; }
+      #contact-wrap .content form label {
+        font-family: "chau_philomene_oneitalic";
+        font-size: 12px;
+        font-weight: normal;
+        position: absolute;
+        top: 6px;
+        left: 8px; }
+      #contact-wrap .content form .form-group {
+        position: relative; }
+      #contact-wrap .content form input.form-control {
+        height: 54px; }
+      #contact-wrap .content form textarea.form-control {
+        min-height: 100px; }
+      #contact-wrap .content form input, #contact-wrap .content form textarea {
+        border-radius: 0;
+        box-shadow: none;
+        border: 1px solid #313131;
+        font-size: 14px;
+        background: transparent;
+        padding-top: 24px;
+        color: #fff; }
+      #contact-wrap .content form button {
+        padding: 10px 50px;
+        text-transform: uppercase; }
+    #contact-wrap .content .social {
+      text-align: center;
+      margin-top: 25px; }
+      #contact-wrap .content .social li {
+        display: inline-block;
+        list-style: none;
+        margin-right: 20px; }
+        #contact-wrap .content .social li:last-child {
+          margin-right: 0; }
+        #contact-wrap .content .social li img {
+          width: 60px; }
+
+footer {
+  padding: 25px 0 0;
+  margin-top: 30px; }
+  footer svg {
+    width: 18px;
+    margin-bottom: 10px; }
+    footer svg path {
+      fill: #383838; }
+  footer p {
+    color: #383838;
+    text-indent: 0px; }
+    footer p strong {
+      font-family: "News Gothic MT Bold";
+      font-weight: normal;
+      display: block; }
+
+/*# sourceMappingURL=style.css.map */

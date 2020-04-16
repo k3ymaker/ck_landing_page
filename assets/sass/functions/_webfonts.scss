@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'News Gothic MT Bold';
+    src: url('../webfonts/NewsGothicMT-Bold.woff2') format('woff2'),
+        url('../webfonts/NewsGothicMT-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'News Gothic MT';
+    src: url('../webfonts/NewsGothicMT.woff2') format('woff2'),
+        url('../webfonts/NewsGothicMT.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'News Gothic MT Italic';
+    src: url('../webfonts/NewsGothicMT-Italic.woff2') format('woff2'),
+        url('../webfonts/NewsGothicMT-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'chau_philomene_oneitalic';
+    src: url('../webfonts/chauphilomeneone-italic-webfont.eot');
+    src: url('../webfonts/chauphilomeneone-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../webfonts/chauphilomeneone-italic-webfont.woff2') format('woff2'),
+         url('../webfonts/chauphilomeneone-italic-webfont.woff') format('woff'),
+         url('../webfonts/chauphilomeneone-italic-webfont.ttf') format('truetype'),
+         url('../webfonts/chauphilomeneone-italic-webfont.svg#chau_philomene_oneitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

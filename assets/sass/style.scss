@@ -1,0 +1,18 @@
+@import 'functions/variables';
+@import 'functions/mixins';
+@import 'functions/webfonts';
+
+body {
+    font-family: $font1;
+    font-size: 12px;
+    color: #000;
+    overflow-x: hidden;
+    position: relative;
+
+    @include tablet {
+    	font-size: 14px;
+    }
+}
+
+@import 'parts/default';
+@import 'parts/main';
